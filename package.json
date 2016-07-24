@@ -1,7 +1,7 @@
 {
   "name": "es6-webpack-starter",
   "version": "1.0.0",
-  "description": "",
+  "description": "A template project for es6/7, webpack2, sass and postcss",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --config webpack/dev.config.js --watch",
     "build": "cross-env NODE_ENV=production webpack --config webpack/prod.config.js --progress --display-error-details --color",
@@ -14,11 +14,13 @@
   },
   "keywords": [
     "es6",
-    "webpack",
+    "es7",
+    "webpack2",
     "starter",
     "template",
     "postcss",
-    "sass"
+    "sass",
+    "css module"
   ],
   "author": "Micooz",
   "license": "MIT",

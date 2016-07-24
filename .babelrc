@@ -1,0 +1,10 @@
+{
+  "presets": [
+    "es2015",
+    "es2016"
+  ],
+  "plugins": [
+    "babel-plugin-transform-class-properties",
+    "babel-plugin-transform-object-rest-spread"
+  ]
+}

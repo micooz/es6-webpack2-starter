@@ -1,0 +1,62 @@
+{
+  "name": "es6-webpack-starter",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development webpack-dev-server --config webpack/dev.config.js --watch",
+    "build": "cross-env NODE_ENV=production webpack --config webpack/prod.config.js --progress --display-error-details --color",
+    "server:prod": "cross-env NODE_ENV=production node bin/server.js",
+    "precommit": "eslint src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/micooz/es6-webpack-starter.git"
+  },
+  "keywords": [
+    "es6",
+    "webpack",
+    "starter",
+    "template",
+    "postcss",
+    "sass"
+  ],
+  "author": "Micooz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/micooz/es6-webpack-starter/issues"
+  },
+  "homepage": "https://github.com/micooz/es6-webpack-starter#readme",
+  "dependencies": {
+    "babel-polyfill": "^6.9.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.3.7",
+    "babel-core": "^6.11.4",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-transform-class-properties": "^6.11.5",
+    "babel-plugin-transform-object-rest-spread": "^6.8.0",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-es2016": "^6.11.3",
+    "clean-webpack-plugin": "^0.1.10",
+    "cross-env": "^2.0.0",
+    "css-loader": "^0.23.1",
+    "eslint": "^3.1.1",
+    "eslint-loader": "^1.4.1",
+    "eslint-plugin-react": "^5.2.2",
+    "express": "^4.14.0",
+    "extract-text-webpack-plugin": "^2.0.0-beta.3",
+    "file-loader": "^0.9.0",
+    "html-webpack-plugin": "^2.22.0",
+    "node-sass": "^3.8.0",
+    "postcss-loader": "^0.9.1",
+    "rimraf": "^2.5.4",
+    "sass-loader": "^4.0.0",
+    "serve-favicon": "^2.3.0",
+    "serve-static": "^1.11.1",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^2.1.0-beta.20",
+    "webpack-dev-server": "^2.1.0-beta.0",
+    "webpack-merge": "^0.14.0"
+  }
+}

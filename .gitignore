@@ -1,0 +1,10 @@
+# IDE
+.idea/
+
+# nodejs
+node_modules/
+npm-debug.log
+
+# others
+static/dist/
+

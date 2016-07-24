@@ -1,1 +1,1 @@
-# es6-webpack-starter
+# es6-webpack2-starter

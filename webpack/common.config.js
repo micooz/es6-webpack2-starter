@@ -7,9 +7,8 @@ const OccurrenceOrderPlugin = require('webpack/lib/optimize/OccurrenceOrderPlugi
 module.exports = {
 
   entry: {
-    'starter': [
-      './src/core.js'
-    ]
+    'starter': './src/core.js',
+    'vendor': './src/vendor.js'
   },
 
   resolve: {

@@ -3,11 +3,14 @@ const autoprefixer = require('autoprefixer');
 
 // webpack plugins
 const OccurrenceOrderPlugin = require('webpack/lib/optimize/OccurrenceOrderPlugin');
+const CommonsChunkPlugin = require('webpack/lib/optimize/CommonsChunkPlugin');
 
 module.exports = {
 
   entry: {
-    'starter': './src/core.js',
+    'app': [
+      './src/core.js'
+    ],
     'vendor': './src/vendor.js'
   },
 
@@ -49,7 +52,11 @@ module.exports = {
   },
 
   plugins: [
-    new OccurrenceOrderPlugin(true)
+    new OccurrenceOrderPlugin(true),
+    new CommonsChunkPlugin({
+      name: ['app', 'vendor'],
+      minChunks: Infinity
+    })
   ],
 
   node: {

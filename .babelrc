@@ -1,7 +1,6 @@
 {
   "presets": [
-    "es2015",
-    "es2016"
+    "latest"
   ],
   "plugins": [
     "babel-plugin-transform-class-properties",

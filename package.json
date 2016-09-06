@@ -41,7 +41,7 @@
     "babel-preset-latest": "^6.14.0",
     "clean-webpack-plugin": "^0.1.10",
     "cross-env": "^2.0.1",
-    "css-loader": "^0.24.0",
+    "css-loader": "^0.25.0",
     "eslint": "^3.4.0",
     "eslint-loader": "^1.5.0",
     "eslint-plugin-react": "^6.2.0",

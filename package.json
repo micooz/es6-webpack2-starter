@@ -39,7 +39,7 @@
     "babel-plugin-transform-class-properties": "^6.11.5",
     "babel-plugin-transform-object-rest-spread": "^6.8.0",
     "babel-preset-latest": "^6.16.0",
-    "clean-webpack-plugin": "^0.1.10",
+    "clean-webpack-plugin": "^0.1.11",
     "cross-env": "^3.0.0",
     "css-loader": "^0.25.0",
     "eslint": "^3.7.1",

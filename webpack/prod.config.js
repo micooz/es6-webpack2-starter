@@ -1,5 +1,6 @@
 const path = require('path');
 const webpackMerge = require('webpack-merge');
+const autoprefixer = require('autoprefixer');
 const webpackCommon = require('./common.config');
 
 // webpack plugins
@@ -9,18 +10,17 @@ const DedupePlugin = require('webpack/lib/optimize/DedupePlugin');
 const UglifyJsPlugin = require('webpack/lib/optimize/UglifyJsPlugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const LoaderOptionsPlugin = require('webpack/lib/LoaderOptionsPlugin');
 
 module.exports = webpackMerge(webpackCommon, {
 
   bail: true,
 
-  debug: false,
-
   devtool: 'source-map',
 
   output: {
 
-    path: path.resolve(__dirname, '../static/dist'),
+    path: path.resolve(__dirname, '../dist'),
 
     filename: '[name]-[hash].min.js',
 
@@ -31,8 +31,10 @@ module.exports = webpackMerge(webpackCommon, {
   },
 
   module: {
-    loaders: [
 
+    // TODO: use webpack old syntax to compatible with ExtractTextPlugin
+    // https://github.com/webpack/extract-text-webpack-plugin/issues/275
+    rules: [
       {
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract({
@@ -44,8 +46,8 @@ module.exports = webpackMerge(webpackCommon, {
           ]
         })
       }
-
     ]
+
   },
 
   plugins: [
@@ -67,8 +69,9 @@ module.exports = webpackMerge(webpackCommon, {
       }
     }),
     new DedupePlugin(),
-    new CleanWebpackPlugin(['static/dist'], {
-      root: path.resolve(__dirname, '..')
+    new CleanWebpackPlugin(['dist'], {
+      root: path.resolve(__dirname, '..'),
+      exclude: '.gitignore'
     }),
     new DefinePlugin({
       'process.env': {
@@ -87,6 +90,18 @@ module.exports = webpackMerge(webpackCommon, {
       output: {
         comments: false,
         screw_ie8: true
+      },
+      sourceMap: true
+    }),
+    new LoaderOptionsPlugin({
+      options: {
+        context: '/',
+        sassLoader: {
+          includePaths: [path.resolve(__dirname, '../src')]
+        },
+        postcss: function () {
+          return [autoprefixer];
+        }
       }
     })
   ]

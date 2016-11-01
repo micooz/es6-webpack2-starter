@@ -1,35 +1,33 @@
 const path = require('path');
-const autoprefixer = require('autoprefixer');
 
 // webpack plugins
-const OccurrenceOrderPlugin = require('webpack/lib/optimize/OccurrenceOrderPlugin');
 const CommonsChunkPlugin = require('webpack/lib/optimize/CommonsChunkPlugin');
 
 module.exports = {
 
   entry: {
     'app': [
-      './src/core.js'
+      './src/bootstrap.js'
     ],
     'vendor': './src/vendor.js'
   },
 
   resolve: {
 
-    extensions: ['', '.js', '.scss'],
+    extensions: ['.js', '.scss'],
 
-    modulesDirectories: ['node_modules']
+    modules: ['node_modules']
 
   },
 
   module: {
 
-    loaders: [
+    rules: [
 
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loaders: ['babel-loader', 'eslint-loader']
+        use: ['babel-loader', 'eslint-loader']
       },
 
       {
@@ -52,24 +50,10 @@ module.exports = {
   },
 
   plugins: [
-    new OccurrenceOrderPlugin(true),
     new CommonsChunkPlugin({
       name: ['app', 'vendor'],
       minChunks: Infinity
     })
-  ],
-
-  node: {
-    global: 'window',
-    crypto: 'empty',
-    process: false,
-    module: false,
-    clearImmediate: false,
-    setImmediate: false
-  },
-
-  postcss: function () {
-    return [autoprefixer];
-  }
+  ]
 
 };

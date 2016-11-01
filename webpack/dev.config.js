@@ -2,13 +2,14 @@ const path = require('path');
 const webpackMerge = require('webpack-merge');
 const webpackCommon = require('./common.config');
 
+const env = require('../env');
+const proxyRules = require('../proxy/rules');
+
 // webpack plugins
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const DefinePlugin = require('webpack/lib/DefinePlugin');
 
 module.exports = webpackMerge(webpackCommon, {
-
-  debug: true,
 
   devtool: 'inline-source-map',
 
@@ -28,17 +29,30 @@ module.exports = webpackMerge(webpackCommon, {
 
   module: {
 
-    loaders: [
-
+    rules: [
       {
         test: /\.scss$/,
-        loaders: [
-          'style-loader',
-          'css-loader?modules&sourceMap&importLoaders=2',
-          'sass-loader?outputStyle=expanded&sourceMap&sourceMapContents'
+        use: [
+          {
+            loader: 'style-loader'
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 2,
+              modules: true
+            }
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              outputStyle: 'expanded',
+              sourceMap: true,
+              sourceMapContents: true
+            }
+          }
         ]
       }
-
     ]
 
   },
@@ -57,26 +71,15 @@ module.exports = webpackMerge(webpackCommon, {
   ],
 
   devServer: {
-    port: 3000,
-    host: 'localhost',
+    host: env.devServer.host || 'localhost',
+    port: env.devServer.port || 3000,
     open: true,
     historyApiFallback: true,
     watchOptions: {
       aggregateTimeout: 300,
       poll: 1000
     },
-    proxy: {
-      '/api': {
-        target: 'https://api.github.com',
-        secure: true,
-        headers: {
-          'Host': 'api.github.com'
-        },
-        pathRewrite: function (path) {
-          return path.replace(/^\/api/, '');
-        }
-      }
-    }
+    proxy: proxyRules
   }
 
 });

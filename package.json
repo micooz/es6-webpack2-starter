@@ -1,11 +1,8 @@
 {
   "name": "es6-webpack2-starter",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "A template project for es6/7, webpack2, sass and postcss",
   "scripts": {
-    "start": "cross-env NODE_ENV=development webpack-dev-server --config webpack/dev.config.js --watch",
-    "build": "cross-env NODE_ENV=production webpack --config webpack/prod.config.js --progress --display-error-details --color",
-    "server:prod": "cross-env NODE_ENV=production node bin/server.js",
     "precommit": "eslint src"
   },
   "repository": {
@@ -33,30 +30,28 @@
   },
   "devDependencies": {
     "autoprefixer": "^6.5.0",
-    "babel-core": "^6.17.0",
-    "babel-eslint": "^7.0.0",
-    "babel-loader": "^6.2.5",
-    "babel-plugin-transform-class-properties": "^6.16.0",
+    "babel-core": "^6.18.0",
+    "babel-eslint": "^7.1.0",
+    "babel-loader": "^6.2.7",
+    "babel-plugin-transform-class-properties": "^6.18.0",
     "babel-plugin-transform-object-rest-spread": "^6.16.0",
     "babel-preset-latest": "^6.16.0",
     "clean-webpack-plugin": "^0.1.13",
-    "cross-env": "^3.1.3",
     "css-loader": "^0.25.0",
-    "eslint": "^3.8.0",
-    "eslint-loader": "^1.5.0",
+    "eslint": "^3.9.0",
+    "eslint-loader": "^1.6.0",
     "eslint-plugin-react": "^6.4.1",
     "extract-text-webpack-plugin": "^2.0.0-beta.3",
     "file-loader": "^0.9.0",
-    "html-webpack-plugin": "^2.22.0",
+    "html-webpack-plugin": "^2.24.1",
     "json-loader": "^0.5.4",
     "node-sass": "^3.10.0",
-    "postcss-loader": "^0.13.0",
-    "rimraf": "^2.5.4",
+    "postcss-loader": "^1.1.0",
     "sass-loader": "^4.0.2",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "webpack": "^2.1.0-beta.20",
     "webpack-dev-server": "^2.1.0-beta.0",
-    "webpack-merge": "^0.14.1"
+    "webpack-merge": "^0.15.0"
   }
 }

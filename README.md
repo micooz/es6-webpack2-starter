@@ -30,12 +30,18 @@ You can custom your local environment via `env.js`, so that it does not affect o
 
 ## Run in development
 
-    $ npm start
+    $ sh/start.sh
 
 ## Build for production
 
-    $ npm run build
-    
+    $ sh/build.sh
+
+This will generator minified css and scripts to `dist/`.
+
+## Proxy
+
+You can change your proxy rules in `proxy/rules`.
+
 ## Need Help?
 
 Ask questions [here](https://github.com/micooz/es6-webpack2-starter/issues).

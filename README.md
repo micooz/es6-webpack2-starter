@@ -18,15 +18,23 @@
 
 ## Installation
 
-    npm install
+    $ npm install
+    # or
+    $ yarn install
+
+## Configuration
+
+1. Copy then rename `env.example.js` to `env.js` if it is not done automatically by `postinstall`.
+
+You can custom your local environment via `env.js`, so that it does not affect others.
 
 ## Run in development
 
-    npm start
+    $ npm start
 
 ## Build for production
 
-    npm run build
+    $ npm run build
     
 ## Need Help?
 

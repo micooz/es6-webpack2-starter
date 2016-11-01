@@ -5,6 +5,6 @@
 node_modules/
 npm-debug.log
 
-# others
-static/dist/
-
+# project
+dist/
+env.js

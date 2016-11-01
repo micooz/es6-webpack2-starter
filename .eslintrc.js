@@ -69,11 +69,11 @@ module.exports = {
     "eol-last": "off",
     "eqeqeq": "error",
     "func-names": [
-      "error",
+      "off",
       "never"
     ],
     "func-style": [
-      "error",
+      "off",
       "expression"
     ],
     "generator-star-spacing": "error",
@@ -185,8 +185,8 @@ module.exports = {
     "no-throw-literal": "error",
     "no-trailing-spaces": "error",
     "no-undef-init": "error",
-    "no-undefined": "error",
-    "no-underscore-dangle": "error",
+    "no-undefined": "off",
+    "no-underscore-dangle": "off",
     "no-unmodified-loop-condition": "error",
     "no-unneeded-ternary": "error",
     "no-unused-expressions": "error",
@@ -199,7 +199,7 @@ module.exports = {
     "no-useless-rename": "error",
     "no-var": "error",
     "no-void": "error",
-    "no-warning-comments": "error",
+    "no-warning-comments": "off",
     "no-whitespace-before-property": "error",
     "no-with": "error",
     "object-curly-newline": "off",

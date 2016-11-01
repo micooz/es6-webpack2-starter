@@ -3,6 +3,7 @@
   "version": "2.0.0",
   "description": "A template project for es6/7, webpack2, sass and postcss",
   "scripts": {
+    "postinstall": "cp env.example.js env.js",
     "precommit": "eslint src"
   },
   "repository": {

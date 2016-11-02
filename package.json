@@ -1,6 +1,6 @@
 {
   "name": "es6-webpack2-starter",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A template project for es6/7, webpack2, sass and postcss",
   "scripts": {
     "postinstall": "cp env.example.js env.js",

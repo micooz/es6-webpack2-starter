@@ -1012,9 +1012,9 @@ clean-css@3.4.x:
     commander "2.8.x"
     source-map "0.4.x"
 
-clean-webpack-plugin@^0.1.13:
-  version "0.1.13"
-  resolved "http://registry.npm.taobao.org/clean-webpack-plugin/download/clean-webpack-plugin-0.1.13.tgz#c2bae9bc4dd44348123ad98e19fa55e7a9b07600"
+clean-webpack-plugin@^0.1.14:
+  version "0.1.14"
+  resolved "http://registry.npm.taobao.org/clean-webpack-plugin/download/clean-webpack-plugin-0.1.14.tgz#72e577e90d38a5b8a42a2d3a9c055c45b84e2194"
   dependencies:
     rimraf "~2.5.1"
 
@@ -1626,7 +1626,7 @@ escope@^3.6.0:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
-eslint-loader@^1.6.0:
+eslint-loader@^1.6.1:
   version "1.6.1"
   resolved "http://registry.npm.taobao.org/eslint-loader/download/eslint-loader-1.6.1.tgz#96c47c812772eeb077e3a81681818e671a2cabf5"
   dependencies:
@@ -3067,7 +3067,7 @@ node-pre-gyp@^0.6.29:
     tar "~2.2.1"
     tar-pack "~3.3.0"
 
-node-sass@^3.10.1:
+node-sass@^3.11.1:
   version "3.11.1"
   resolved "http://registry.npm.taobao.org/node-sass/download/node-sass-3.11.1.tgz#0b25699663cc9d616e8c6fb874e7d9b25e5a8e20"
   dependencies:

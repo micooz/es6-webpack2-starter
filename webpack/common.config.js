@@ -1,5 +1,3 @@
-const path = require('path');
-
 // webpack plugins
 const CommonsChunkPlugin = require('webpack/lib/optimize/CommonsChunkPlugin');
 

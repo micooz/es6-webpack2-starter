@@ -30,11 +30,11 @@ You can custom your local environment via `env.js`, so that it does not affect o
 
 ## Run in development
 
-    $ sh/start.sh
+    $ npm start
 
 ## Build for production
 
-    $ sh/build.sh
+    $ npm run build
 
 This will generator minified css and scripts to `dist/`.
 

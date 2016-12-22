@@ -195,7 +195,7 @@ asynckit@^0.4.0:
   version "0.4.0"
   resolved "http://registry.npm.taobao.org/asynckit/download/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
 
-autoprefixer@^6.3.1, autoprefixer@^6.5.3:
+autoprefixer@^6.3.1:
   version "6.5.3"
   resolved "http://registry.npm.taobao.org/autoprefixer/download/autoprefixer-6.5.3.tgz#2d853af66d04449fcf50db3066279ab54c3e4b01"
   dependencies:
@@ -204,6 +204,17 @@ autoprefixer@^6.3.1, autoprefixer@^6.5.3:
     normalize-range "^0.1.2"
     num2fraction "^1.2.2"
     postcss "^5.2.5"
+    postcss-value-parser "^3.2.3"
+
+autoprefixer@^6.5.4:
+  version "6.5.4"
+  resolved "http://registry.npm.taobao.org/autoprefixer/download/autoprefixer-6.5.4.tgz#1386eb6708ccff36aefff70adc694ecfd60af1b0"
+  dependencies:
+    browserslist "~1.4.0"
+    caniuse-db "^1.0.30000597"
+    normalize-range "^0.1.2"
+    num2fraction "^1.2.2"
+    postcss "^5.2.6"
     postcss-value-parser "^3.2.3"
 
 aws-sign2@~0.6.0:
@@ -230,19 +241,19 @@ babel-code-frame@^6.20.0:
     esutils "^2.0.2"
     js-tokens "^2.0.0"
 
-babel-core@^6.18.0, babel-core@^6.20.0:
-  version "6.20.0"
-  resolved "http://registry.npm.taobao.org/babel-core/download/babel-core-6.20.0.tgz#ab0d7176d9dea434e66badadaf92237865eab1ec"
+babel-core@^6.18.0, babel-core@^6.21.0:
+  version "6.21.0"
+  resolved "http://registry.npm.taobao.org/babel-core/download/babel-core-6.21.0.tgz#75525480c21c803f826ef3867d22c19f080a3724"
   dependencies:
     babel-code-frame "^6.20.0"
-    babel-generator "^6.20.0"
+    babel-generator "^6.21.0"
     babel-helpers "^6.16.0"
     babel-messages "^6.8.0"
     babel-register "^6.18.0"
     babel-runtime "^6.20.0"
     babel-template "^6.16.0"
-    babel-traverse "^6.20.0"
-    babel-types "^6.20.0"
+    babel-traverse "^6.21.0"
+    babel-types "^6.21.0"
     babylon "^6.11.0"
     convert-source-map "^1.1.0"
     debug "^2.1.1"
@@ -264,13 +275,13 @@ babel-eslint@^7.1.1:
     babylon "^6.13.0"
     lodash.pickby "^4.6.0"
 
-babel-generator@^6.20.0:
-  version "6.20.0"
-  resolved "http://registry.npm.taobao.org/babel-generator/download/babel-generator-6.20.0.tgz#fee63614e0449390103b3097f3f6a118016c6766"
+babel-generator@^6.21.0:
+  version "6.21.0"
+  resolved "http://registry.npm.taobao.org/babel-generator/download/babel-generator-6.21.0.tgz#605f1269c489a1c75deeca7ea16d43d4656c8494"
   dependencies:
     babel-messages "^6.8.0"
     babel-runtime "^6.20.0"
-    babel-types "^6.20.0"
+    babel-types "^6.21.0"
     detect-indent "^4.0.0"
     jsesc "^1.3.0"
     lodash "^4.2.0"
@@ -377,9 +388,9 @@ babel-helpers@^6.16.0:
     babel-runtime "^6.0.0"
     babel-template "^6.16.0"
 
-babel-loader@^6.2.9:
-  version "6.2.9"
-  resolved "http://registry.npm.taobao.org/babel-loader/download/babel-loader-6.2.9.tgz#2bce6a1c29b47afa90b937ba1fb1f87084d61c61"
+babel-loader@^6.2.10:
+  version "6.2.10"
+  resolved "http://registry.npm.taobao.org/babel-loader/download/babel-loader-6.2.10.tgz#adefc2b242320cd5d15e65b31cea0e8b1b02d4b0"
   dependencies:
     find-cache-dir "^0.1.1"
     loader-utils "^0.2.11"
@@ -704,14 +715,7 @@ babel-register@^6.18.0:
     mkdirp "^0.5.1"
     source-map-support "^0.4.2"
 
-babel-runtime@^6.0.0, babel-runtime@^6.11.6, babel-runtime@^6.9.0, babel-runtime@^6.9.1:
-  version "6.18.0"
-  resolved "http://registry.npm.taobao.org/babel-runtime/download/babel-runtime-6.18.0.tgz#0f4177ffd98492ef13b9f823e9994a02584c9078"
-  dependencies:
-    core-js "^2.4.0"
-    regenerator-runtime "^0.9.5"
-
-babel-runtime@^6.20.0:
+babel-runtime@^6.0.0, babel-runtime@^6.11.6, babel-runtime@^6.20.0, babel-runtime@^6.9.0, babel-runtime@^6.9.1:
   version "6.20.0"
   resolved "http://registry.npm.taobao.org/babel-runtime/download/babel-runtime-6.20.0.tgz#87300bdcf4cd770f09bf0048c64204e17806d16f"
   dependencies:
@@ -742,14 +746,14 @@ babel-traverse@^6.15.0, babel-traverse@^6.16.0, babel-traverse@^6.18.0:
     invariant "^2.2.0"
     lodash "^4.2.0"
 
-babel-traverse@^6.20.0:
-  version "6.20.0"
-  resolved "http://registry.npm.taobao.org/babel-traverse/download/babel-traverse-6.20.0.tgz#5378d1a743e3d856e6a52289994100bbdfd9872a"
+babel-traverse@^6.21.0:
+  version "6.21.0"
+  resolved "http://registry.npm.taobao.org/babel-traverse/download/babel-traverse-6.21.0.tgz#69c6365804f1a4f69eb1213f85b00a818b8c21ad"
   dependencies:
     babel-code-frame "^6.20.0"
     babel-messages "^6.8.0"
     babel-runtime "^6.20.0"
-    babel-types "^6.20.0"
+    babel-types "^6.21.0"
     babylon "^6.11.0"
     debug "^2.2.0"
     globals "^9.0.0"
@@ -765,9 +769,9 @@ babel-types@^6.15.0, babel-types@^6.16.0, babel-types@^6.18.0, babel-types@^6.8.
     lodash "^4.2.0"
     to-fast-properties "^1.0.1"
 
-babel-types@^6.20.0:
-  version "6.20.0"
-  resolved "http://registry.npm.taobao.org/babel-types/download/babel-types-6.20.0.tgz#3869ecb98459533b37df809886b3f7f3b08d2baa"
+babel-types@^6.21.0:
+  version "6.21.0"
+  resolved "http://registry.npm.taobao.org/babel-types/download/babel-types-6.21.0.tgz#314b92168891ef6d3806b7f7a917fdf87c11a4b2"
   dependencies:
     babel-runtime "^6.20.0"
     esutils "^2.0.2"
@@ -971,6 +975,10 @@ camelcase@^3.0.0:
 caniuse-db@^1.0.30000539, caniuse-db@^1.0.30000578:
   version "1.0.30000580"
   resolved "http://registry.npm.taobao.org/caniuse-db/download/caniuse-db-1.0.30000580.tgz#04bf77139486b792ca42b4ab8ef0cbec00fe4640"
+
+caniuse-db@^1.0.30000597:
+  version "1.0.30000602"
+  resolved "http://registry.npm.taobao.org/caniuse-db/download/caniuse-db-1.0.30000602.tgz#06b2cbfb6c3aeef7ddb18cd588043549ad1a2d4e"
 
 caseless@~0.11.0:
   version "0.11.0"
@@ -1692,9 +1700,9 @@ eslint-plugin-react@^6.8.0:
     doctrine "^1.2.2"
     jsx-ast-utils "^1.3.4"
 
-eslint@^3.12.0:
-  version "3.12.0"
-  resolved "http://registry.npm.taobao.org/eslint/download/eslint-3.12.0.tgz#1dfa4ef0082e35feed90a0fb1f7996d1d426b249"
+eslint@^3.12.2:
+  version "3.12.2"
+  resolved "http://registry.npm.taobao.org/eslint/download/eslint-3.12.2.tgz#6be5a9aa29658252abd7f91e9132bab1f26f3c34"
   dependencies:
     babel-code-frame "^6.16.0"
     chalk "^1.1.3"
@@ -2970,9 +2978,9 @@ node-pre-gyp@^0.6.29:
     tar "~2.2.1"
     tar-pack "~3.3.0"
 
-node-sass@^3.13.0:
-  version "3.13.0"
-  resolved "http://registry.npm.taobao.org/node-sass/download/node-sass-3.13.0.tgz#d08b95bdebf40941571bd2c16a9334b980f8924f"
+node-sass@^4.1.1:
+  version "4.1.1"
+  resolved "http://registry.npm.taobao.org/node-sass/download/node-sass-4.1.1.tgz#dc3e27d25bd827b6276ea243be357c7c7cd07111"
   dependencies:
     async-foreach "^0.1.3"
     chalk "^1.1.1"
@@ -2983,6 +2991,7 @@ node-sass@^3.13.0:
     in-publish "^2.0.0"
     lodash.assign "^4.2.0"
     lodash.clonedeep "^4.3.2"
+    lodash.mergewith "^4.6.0"
     meow "^3.7.0"
     mkdirp "^0.5.1"
     nan "^2.3.2"
@@ -2990,6 +2999,7 @@ node-sass@^3.13.0:
     npmlog "^4.0.0"
     request "^2.61.0"
     sass-graph "^2.1.1"
+    stdout-stream "^1.4.0"
 
 node-uuid@~1.4.7:
   version "1.4.7"
@@ -3359,9 +3369,9 @@ postcss-load-plugins@^2.0.0:
     cosmiconfig "^2.1.0"
     object-assign "^4.1.0"
 
-postcss-loader@^1.2.0:
-  version "1.2.0"
-  resolved "http://registry.npm.taobao.org/postcss-loader/download/postcss-loader-1.2.0.tgz#42f29c5526e0fafac7100a4aab4d7d4acb5143e9"
+postcss-loader@^1.2.1:
+  version "1.2.1"
+  resolved "http://registry.npm.taobao.org/postcss-loader/download/postcss-loader-1.2.1.tgz#8809ab184a9f903a01f660385f2e296ff563d22c"
   dependencies:
     loader-utils "^0.2.16"
     object-assign "^4.1.0"
@@ -3771,10 +3781,6 @@ regenerator-runtime@^0.10.0:
   version "0.10.1"
   resolved "http://registry.npm.taobao.org/regenerator-runtime/download/regenerator-runtime-0.10.1.tgz#257f41961ce44558b18f7814af48c17559f9faeb"
 
-regenerator-runtime@^0.9.5:
-  version "0.9.5"
-  resolved "http://registry.npm.taobao.org/regenerator-runtime/download/regenerator-runtime-0.9.5.tgz#403d6d40a4bdff9c330dd9392dcbb2d9a8bba1fc"
-
 regex-cache@^0.4.2:
   version "0.4.3"
   resolved "http://registry.npm.taobao.org/regex-cache/download/regex-cache-0.4.3.tgz#9b1a6c35d4d0dfcef5711ae651e8e9d3d7114145"
@@ -3933,9 +3939,9 @@ sass-graph@^2.1.1:
     lodash "^4.0.0"
     yargs "^4.7.1"
 
-sass-loader@^4.0.2:
-  version "4.0.2"
-  resolved "http://registry.npm.taobao.org/sass-loader/download/sass-loader-4.0.2.tgz#a616eb770366543e64f547c8630f39c4da75f15d"
+sass-loader@^4.1.1:
+  version "4.1.1"
+  resolved "http://registry.npm.taobao.org/sass-loader/download/sass-loader-4.1.1.tgz#79ef9468cf0bf646c29529e1f2cba6bd6e51c7bc"
   dependencies:
     async "^2.0.1"
     loader-utils "^0.2.15"
@@ -4149,6 +4155,12 @@ sshpk@^1.7.0:
 "statuses@>= 1.3.0 < 2", statuses@~1.3.0:
   version "1.3.0"
   resolved "http://registry.npm.taobao.org/statuses/download/statuses-1.3.0.tgz#8e55758cb20e7682c1f4fce8dcab30bf01d1e07a"
+
+stdout-stream@^1.4.0:
+  version "1.4.0"
+  resolved "http://registry.npm.taobao.org/stdout-stream/download/stdout-stream-1.4.0.tgz#a2c7c8587e54d9427ea9edb3ac3f2cd522df378b"
+  dependencies:
+    readable-stream "^2.0.1"
 
 stream-browserify@^2.0.1:
   version "2.0.1"
@@ -4527,9 +4539,9 @@ webpack-dev-server@^2.1.0-beta.0:
     webpack-dev-middleware "^1.4.0"
     yargs "^6.0.0"
 
-webpack-merge@^1.1.0:
-  version "1.1.0"
-  resolved "http://registry.npm.taobao.org/webpack-merge/download/webpack-merge-1.1.0.tgz#e51d941c75f180219e73cc514cbf709f109ea26f"
+webpack-merge@^2.0.0:
+  version "2.0.0"
+  resolved "http://registry.npm.taobao.org/webpack-merge/download/webpack-merge-2.0.0.tgz#fd328707d26f6f9852be2767557cef51d942c1dc"
   dependencies:
     lodash.clonedeep "^4.5.0"
     lodash.differencewith "^4.5.0"

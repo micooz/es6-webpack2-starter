@@ -6,7 +6,6 @@ const webpackCommon = require('./common.config');
 // webpack plugins
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const DefinePlugin = require('webpack/lib/DefinePlugin');
-const DedupePlugin = require('webpack/lib/optimize/DedupePlugin');
 const UglifyJsPlugin = require('webpack/lib/optimize/UglifyJsPlugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -32,14 +31,12 @@ module.exports = webpackMerge(webpackCommon, {
 
   module: {
 
-    // TODO: use webpack old syntax to compatible with ExtractTextPlugin
-    // https://github.com/webpack/extract-text-webpack-plugin/issues/275
     rules: [
       {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract({
-          fallbackLoader: 'style-loader',
-          loader: [
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [
             'css-loader?modules&localIdentName=[name]__[local]&minimize&sourceMap&importLoaders=2',
             'postcss-loader',
             'sass-loader?outputStyle=expanded&sourceMap&sourceMapContents'
@@ -68,7 +65,6 @@ module.exports = webpackMerge(webpackCommon, {
         minifyURLs: true
       }
     }),
-    new DedupePlugin(),
     new CleanWebpackPlugin(['dist'], {
       root: path.resolve(__dirname, '..'),
       exclude: '.gitignore'
@@ -78,7 +74,7 @@ module.exports = webpackMerge(webpackCommon, {
         NODE_ENV: '"production"'
       }
     }),
-    new ExtractTextPlugin('[name]-[chunkhash].css'),
+    new ExtractTextPlugin('[name]-[chunkhash].min.css'),
     new UglifyJsPlugin({
       compressor: {
         screw_ie8: true,

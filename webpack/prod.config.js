@@ -37,9 +37,33 @@ module.exports = webpackMerge(webpackCommon, {
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: [
-            'css-loader?modules&localIdentName=[name]__[local]&minimize&sourceMap&importLoaders=2',
-            'postcss-loader',
-            'sass-loader?outputStyle=expanded&sourceMap&sourceMapContents'
+            {
+              loader: 'css-loader',
+              options: {
+                modules: true,
+                minimize: true,
+                sourceMap: true,
+                importLoaders: 2,
+                localIdentName: '[name]__[local]'
+              }
+            },
+            {
+              loader: 'postcss-loader',
+              options: {
+                config: {
+                  path: path.resolve(__dirname, 'postcss.config.js')
+                },
+                sourceMap: true
+              }
+            },
+            {
+              loader: 'sass-loader',
+              options: {
+                outputStyle: 'expanded',
+                sourceMap: true,
+                sourceMapContents: true
+              }
+            }
           ]
         })
       }
@@ -94,9 +118,6 @@ module.exports = webpackMerge(webpackCommon, {
         context: '/',
         sassLoader: {
           includePaths: [path.resolve(__dirname, '../src')]
-        },
-        postcss: function () {
-          return [autoprefixer];
         }
       }
     })

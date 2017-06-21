@@ -6,14 +6,14 @@
 [![David](https://img.shields.io/david/dev/micooz/es6-webpack2-starter.svg?maxAge=2592000?style=flat-square)]()
 [![%e2%9d%a4](https://img.shields.io/badge/made%20with-%e2%9d%a4-ff69b4.svg?style=flat-square)](https://apporz.com)
 
-> A template project for ECMAScript(latest), webpack2, sass and postcss.
+> A template project for ECMAScript(latest), webpack3, sass and postcss.
 
 ## Features
 
 * es6: by babel and it's presets and plugins
 * css module: by css-loader
 * sass: by sass-loader
-* webpack2 provides faster compilation
+* webpack3 provides faster compilation
 * auto-reload by webpack-dev-server
 
 ## Installation

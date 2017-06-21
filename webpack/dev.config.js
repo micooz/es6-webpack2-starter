@@ -74,11 +74,14 @@ module.exports = webpackMerge(webpackCommon, {
   devServer: {
     host: env.devServer.host || 'localhost',
     port: env.devServer.port || 3000,
-    open: true,
     historyApiFallback: true,
     watchOptions: {
       aggregateTimeout: 300,
       poll: 1000
+    },
+    overlay: {
+      warnings: true,
+      errors: true
     },
     proxy: proxyRules
   }

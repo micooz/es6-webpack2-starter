@@ -41,6 +41,7 @@
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-preset-env": "^1.5.2",
     "clean-webpack-plugin": "^0.1.16",
+    "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.28.4",
     "eslint": "^4.0.0",
     "eslint-loader": "^1.8.0",

@@ -76,10 +76,15 @@ module.exports = webpackMerge(webpackCommon, {
   devServer: {
     host: env.devServer.host || 'localhost',
     port: env.devServer.port || 3000,
-    historyApiFallback: true,
+    contentBase: path.resolve(__dirname, '../static'),
+    watchContentBase: true,
+    compress: true,
+    hot: true,
+    historyApiFallback: {
+      disableDotRule: true
+    },
     watchOptions: {
-      aggregateTimeout: 300,
-      poll: 1000
+      ignored: /node_modules/
     },
     overlay: {
       warnings: true,
